@@ -1,0 +1,10 @@
+<?php include_once("dbConnection.php");?>
+<div class="image">
+ <img src="dist\img\DSC_8563 copy.jpg" height="300" width="300" class="img-circle elevation-2" alt="User Image"></a>
+        </div>
+
+Welcome:<?php echo $_SESSION['name'];?><br>
+
+ID :<?php echo $_SESSION['id'];?>
+
+

@@ -1,0 +1,90 @@
+<?php include("head.php");?>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <?php include("Sidebar.php");?>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+       <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title"></h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example2" class="table table-bordered table-hover">
+				
+                  <thead style = "bgcolor:pink">
+                  <tr>
+                    <th>Sl.No</th>
+                    <th>name</th>
+                    <th>username</th>
+					<th>password</th>
+					<th>role</th>
+					
+                  </tr>
+                 
+                  </thead>
+				  
+                  <tbody>
+				  <?php	$sql = "select * from admin"; 
+		$sql_query = mysqli_query($conn,$sql);
+		echo "<pre>" ;
+		$i=1;
+		while ($result = mysqli_fetch_assoc($sql_query )){
+			
+		 //print_r($result) ;}
+		
+		?> 
+                  <tr>
+						<td><?php //echo $i;?></td>
+						<td> <?php echo $result['name'];?> </td>
+						<td><?php echo $result['username'];?></td>
+						<td> <?php echo $result['password'];?> </td>
+						<td> <?php echo $result['role'];?> </td>
+					
+                  </tr>
+		<?php } ?>
+	
+                  
+     
+                  </tbody>
+                  
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+    </section>
+
+    
+           
+              
+                  
+
+                  
+                 
+                </form>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+ 
+ <?php include("footer.php");?>

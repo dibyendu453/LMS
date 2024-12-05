@@ -1,0 +1,19 @@
+#container{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:400px;
+	
+	
+}
+
+#container div{
+	height:370px;
+	width:335px;
+	bckground:red;
+	margin:60px;
+	border:normal
+	
+	
+	
+}
